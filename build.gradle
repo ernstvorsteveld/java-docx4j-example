@@ -1,0 +1,32 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.sternitc'
+version = '0.0.1'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation "org.docx4j:docx4j-core:${docx4j_version}"
+	implementation "org.docx4j:docx4j-JAXB-MOXy:${docx4j_jaxb_moxy_version}"
+	implementation "org.springframework:spring-core:${spring_version}"
+	compileOnly "org.projectlombok:lombok:${lombok_version}"
+	annotationProcessor "org.projectlombok:lombok:${lombok_version}"
+
+	testImplementation(platform("org.junit:junit-bom:${junit_bom_version}"))
+	testImplementation "org.junit.jupiter:junit-jupiter"
+}
+
+test {
+	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+}
