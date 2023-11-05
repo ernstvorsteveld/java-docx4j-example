@@ -58,7 +58,6 @@ public abstract class AbstractTemplateMerger {
 }
 
 class TextPositionCalculator {
-
     private int start = 0;
 
     TextPosition calculate(Text text) {
@@ -79,7 +78,7 @@ class Replacer {
         this.completeString = completeString;
     }
 
-    void doReplace(Map.Entry<String, List<Data>> entry) {
+    public void doReplace(Map.Entry<String, List<Data>> entry) {
         String source = completeString;
         int length = entry.getKey().length();
         while (true) {
