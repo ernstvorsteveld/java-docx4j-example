@@ -3,7 +3,6 @@ package com.sternitc.docx;
 import com.sternitc.docx.domain.Data;
 import com.sternitc.docx.domain.SimpleData;
 import com.sternitc.docx.domain.TemplateData;
-import org.apache.commons.compress.utils.Lists;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.junit.jupiter.api.Test;
 import org.springframework.core.io.ClassPathResource;
